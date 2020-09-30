@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="flex__container">
+            <div class="flex__item" id="filtro">
+                <p>Filtro</p>
+                <label for="">
+                    <input id="input" type="text" oninput="filterByInput(arr, this.value)">
+                </label>
+                <div id="checkbox">
+                </div>
+                <button onclick="clearAllCheckboxes()">Clear all</button>
+            </div>
+            <div class="flex__item">
+                <div style="display:flex;justify-content: center;">
+                    <p class="nav__slice" id="arr_backward" onclick="changeTab(this.getAttribute('data-slice'))">&lt;=
+                    </p>
+                    <div id="navigation">
+                        <noscript></noscript>
+                    </div>
+                    <p class="nav__slice" id="arr_forward" onclick="changeTab(this.getAttribute('data-slice'))">=&gt;
+                    </p>
+                </div>
+                <div class="movies" id="loader">
+                    <noscript></noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        buildList(arr, '#checkbox')
+        loader(separateArr(arr), '#loader')
+
+    </script>
+</body>
+
+</html>

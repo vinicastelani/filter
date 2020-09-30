@@ -1,0 +1,62 @@
+html,body{
+    margin:0;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px;
+}
+.flex__container{
+    display: flex;
+    flex-flow: column;
+    padding: 16px;
+}
+.flex__item{
+    width:100%;
+    
+}
+.movies{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.slice{
+    display: flex;
+    box-sizing: border-box;
+}
+.slice div{
+    width:calc(25% - 20px);
+    flex-grow: 4;
+    margin: 10px;
+}
+#navigation{
+    display: flex;
+    justify-content: center;
+}
+.nav__slice{
+    background:#c3c3c3;
+    margin:0 10px;
+    width:40px;
+    height:40px;
+    text-align: center;
+}
+
+#filtro{
+    align-self: center;
+}
+img{
+    width:100%;
+    min-height: 640px;
+}
+.header{
+    font-size:20px;
+}
+.text{
+    font-size:18px;
+}
+.date{
+    font-size:16px;
+}
